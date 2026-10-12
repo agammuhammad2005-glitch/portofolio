@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agam | Personal Portfolio</title>
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            primary: '#0F172A',
+            accent: '#2563EB',
+            surface: '#F8FAFC',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#FAFAFA] text-slate-800 font-sans antialiased selection:bg-slate-900 selection:text-white">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="font-heading font-extrabold text-xl tracking-tight text-slate-900 flex items-center gap-2">
+        <span class="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center text-sm font-bold shadow-sm">M</span>
+        alghifari.
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a href="#about" class="hover:text-slate-900 transition-colors">Tentang</a>
+        <a href="#education" class="hover:text-slate-900 transition-colors">Pendidikan & Pengalaman</a>
+        <a href="#projects" class="hover:text-slate-900 transition-colors">Proyek</a>
+        <a href="#skills" class="hover:text-slate-900 transition-colors">Keahlian</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold bg-slate-900 text-white hover:bg-slate-800 shadow-sm transition-all hover:scale-105 active:scale-95">
+          <span>Hubungi Saya</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 pt-32 pb-24 space-y-28">
+
+    <!-- HERO SECTION -->
+    <section class="pt-6 md:pt-12 flex flex-col md:flex-row items-center justify-between gap-12">
+      <div class="flex-1 space-y-6">
+        <!-- Status Badge -->
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Terbuka untuk peluang baru & magang
+        </div>
+
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-[1.15]">
+          Halo, saya <span class="underline decoration-slate-300 underline-offset-8">Muhamad Al Ghifari</span>.
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed">
+          Spesialis di bidang <span class="font-semibold text-slate-800">Geographic Information System (GIS)</span>, analisis data spasial, dan visualisasi dashboard interaktif. Terampil mengembangkan solusi pemetaan digital berbasis WebGIS serta pemodelan data spasio-temporal.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <a href="#projects" class="px-6 py-3 rounded-xl bg-slate-900 text-white font-medium text-sm hover:bg-slate-800 transition-all shadow-sm">
+            Lihat Proyek & Analisis
+          </a>
+          <a href="#contact" class="px-6 py-3 rounded-xl border border-slate-200 bg-white text-slate-700 font-medium text-sm hover:bg-slate-50 hover:border-slate-300 transition-all">
+            Kontak & Diskusi
+          </a>
+        </div>
+
+        <!-- Quick Socials -->
+        <div class="flex items-center gap-4 pt-4 text-slate-500">
+          <a href="https://github.com" target="_blank" rel="noopener" class="p-2 rounded-lg hover:text-slate-900 hover:bg-slate-100 transition-colors" title="GitHub">
+            <i data-lucide="github" class="w-5 h-5"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="p-2 rounded-lg hover:text-slate-900 hover:bg-slate-100 transition-colors" title="LinkedIn">
+            <i data-lucide="linkedin" class="w-5 h-5"></i>
+          </a>
+          <a href="mailto:agam.muhammad2005@gmail.com" class="p-2 rounded-lg hover:text-slate-900 hover:bg-slate-100 transition-colors" title="Email: agam.muhammad2005@gmail.com">
+            <i data-lucide="mail" class="w-5 h-5"></i>
+          </a>
+          <a href="https://instagram.com/agam.dki" target="_blank" rel="noopener" class="p-2 rounded-lg hover:text-slate-900 hover:bg-slate-100 transition-colors" title="Instagram: @agam.dki">
+            <i data-lucide="instagram" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Avatar / Illustration -->
+      <div class="w-full md:w-auto flex justify-center">
+        <div class="relative w-64 h-64 sm:w-72 sm:h-72 rounded-3xl bg-gradient-to-tr from-slate-100 to-slate-50 p-2 border border-slate-200/80 shadow-sm flex items-center justify-center overflow-hidden">
+          <div class="w-full h-full rounded-2xl bg-white flex flex-col items-center justify-center p-6 text-center space-y-4 border border-slate-100">
+            <div class="w-24 h-24 rounded-full bg-slate-100 border-2 border-slate-200 flex items-center justify-center text-slate-400">
+              <i data-lucide="map-pin" class="w-12 h-12 stroke-[1.5] text-slate-600"></i>
+            </div>
+            <div>
+              <h2 class="font-heading font-bold text-slate-800 text-base">Muhamad Al Ghifari</h2>
+              <p class="text-xs text-slate-500">GIS Specialist & Data Analyst</p>
+            </div>
+            <div class="text-[11px] text-slate-400 font-mono">
+              📍 Indonesia
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="space-y-6 pt-6">
+      <div class="flex items-center gap-3">
+        <span class="w-8 h-[1px] bg-slate-300"></span>
+        <h2 class="font-heading text-xs uppercase tracking-widest text-slate-400 font-semibold">Tentang Saya</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 items-start">
+        <div class="md:col-span-2 space-y-4 text-slate-600 leading-relaxed text-base">
+          <p>
+            Memadukan kekuatan <strong>Sistem Informasi Geografis (SIG/GIS)</strong> dan <strong>Business Intelligence</strong> untuk mengubah data mentah dan koordinat spasial menjadi wawasan strategis yang mudah dipahami.
+          </p>
+          <p>
+            Berpengalaman dalam pengolahan data geospasial menggunakan QGIS, perancangan dashboard analitik interaktif dengan Power BI & Excel tingkat lanjut, hingga pembangunan platform WebGIS sederhana yang responsif untuk visualisasi peta publik maupun kebutuhan organisasi.
+          </p>
+        </div>
+
+        <!-- Quick Stats / Highlights -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-4">
+          <div>
+            <span class="text-3xl font-extrabold font-heading text-slate-900">100%</span>
+            <p class="text-xs text-slate-500 mt-1">Dedikasi & Semangat Belajar</p>
+          </div>
+          <div class="border-t border-slate-100 pt-3">
+            <span class="text-3xl font-extrabold font-heading text-slate-900">5+</span>
+            <p class="text-xs text-slate-500 mt-1">Proyek Mandiri & Tim Selesai</p>
+          </div>
+          <div class="border-t border-slate-100 pt-3">
+            <span class="text-xs font-semibold text-slate-700 block">Fokus Keahlian:</span>
+            <p class="text-xs text-slate-500 mt-0.5">Spatial Analysis, WebGIS, Business Intelligence & Dashboarding</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & TIMELINE -->
+    <section id="education" class="space-y-8 pt-6">
+      <div class="flex items-center gap-3">
+        <span class="w-8 h-[1px] bg-slate-300"></span>
+        <h2 class="font-heading text-xs uppercase tracking-widest text-slate-400 font-semibold">Pendidikan & Pengalaman</h2>
+      </div>
+
+      <div class="space-y-6 relative border-l-2 border-slate-200 ml-4 pl-6">
+        <!-- Item 1 -->
+        <div class="relative group">
+          <div class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-white border-2 border-slate-900 group-hover:scale-125 transition-transform"></div>
+          <div class="space-y-1">
+            <span class="text-xs font-mono text-slate-400">2022 - Sekarang</span>
+            <h3 class="font-heading text-base font-bold text-slate-900">Pendidikan Terkait Geografi / Sains Informasi Spasial / IT</h3>
+            <p class="text-sm text-slate-600 font-medium">Universitas / Institut Pilihan</p>
+            <p class="text-xs text-slate-500 pt-1 leading-normal">
+              Mempelajari konsep pemetaan digital, analisis spasial dan statistik, penginderaan jauh, serta integrasi teknologi web dan database spasial.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="relative group">
+          <div class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-white border-2 border-slate-400 group-hover:scale-125 transition-transform"></div>
+          <div class="space-y-1">
+            <span class="text-xs font-mono text-slate-400">2023 - 2024</span>
+            <h3 class="font-heading text-base font-bold text-slate-900">Praktikum / Proyek Analisis Geospasial</h3>
+            <p class="text-sm text-slate-600 font-medium">Pengolahan Data & Pemetaan Wilayah</p>
+            <p class="text-xs text-slate-500 pt-1 leading-normal">
+              Melakukan digitalisasi peta, georeferencing, analisis overlay multi-kriteria (AHP), dan visualisasi tematik berbasis QGIS.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="space-y-6 pt-6">
+      <div class="flex items-center gap-3">
+        <span class="w-8 h-[1px] bg-slate-300"></span>
+        <h2 class="font-heading text-xs uppercase tracking-widest text-slate-400 font-semibold">Keahlian & Tools</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Card 1: GIS & Spatial Analysis -->
+        <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm space-y-3 hover:border-slate-300 transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+            <i data-lucide="map" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-heading font-bold text-sm text-slate-900">GIS & Spatial Analysis</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            Penguasaan <strong>QGIS</strong> untuk georeferencing, digitasi, analisis spasial vektor/raster, buffer, overlay, dan pembuatan peta tematik standar kartografi.
+          </p>
+        </div>
+
+        <!-- Card 2: WebGIS & Web Development -->
+        <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm space-y-3 hover:border-slate-300 transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
+            <i data-lucide="globe" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-heading font-bold text-sm text-slate-900">WebGIS & Frontend</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            Pengembangan <strong>WebGIS interaktif</strong> & website sederhana memanfaatkan Leaflet JS, MapLibre, HTML5, CSS3/Tailwind, dan JavaScript.
+          </p>
+        </div>
+
+        <!-- Card 3: Business Intelligence & Power BI -->
+        <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm space-y-3 hover:border-slate-300 transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center">
+            <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-heading font-bold text-sm text-slate-900">Data Analytics & Power BI</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            Pembuatan <strong>interactive dashboard</strong> dengan <strong>Power BI</strong>, pemodelan data terstruktur, kalkulasi DAX dasar, dan penyusunan KPI visual.
+          </p>
+        </div>
+
+        <!-- Card 4: Advanced Spreadsheet & Excel -->
+        <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm space-y-3 hover:border-slate-300 transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center">
+            <i data-lucide="file-spreadsheet" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-heading font-bold text-sm text-slate-900">Spreadsheet & Data Processing</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            Pengolahan data tabular menggunakan <strong>Microsoft Excel</strong> (Pivot Table, XLOOKUP, Index-Match, Data Cleaning & Power Query).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="space-y-6 pt-6">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-[1px] bg-slate-300"></span>
+          <h2 class="font-heading text-xs uppercase tracking-widest text-slate-400 font-semibold">Proyek Pilihan</h2>
+        </div>
+        <span class="text-xs text-slate-400">Total 2 Proyek Unggulan</span>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Project 1 (Real Live Project) -->
+        <div class="group bg-white rounded-2xl border-2 border-slate-900/10 hover:border-slate-900/30 overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col justify-between relative">
+          <div class="absolute top-3 right-3">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              Live Demo
+            </span>
+          </div>
+          <div class="p-6 space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="text-[11px] font-semibold text-blue-600 uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded-md">WebGIS Unggulan</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">
+              <a href="https://webgis-banda-aceh.vercel.app/" target="_blank" rel="noopener" class="flex items-center gap-2">
+                WebGIS Kawasan Rawan Bencana Banda Aceh
+                <i data-lucide="external-link" class="w-4 h-4 opacity-70 group-hover:opacity-100"></i>
+              </a>
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Platform sistem informasi geografis interaktif untuk memetakan kawasan rawan bencana (tsunami/banjir) di Kota Banda Aceh. Dilengkapi <strong>layer switcher interaktif</strong> (batas kecamatan, jaringan jalan, titik bencana), <strong>multi-basemap</strong> (OSM, Satelit, Topografi), <strong>pencarian wilayah</strong>, <strong>panel statistik spasial</strong>, hingga fitur <strong>asisten chatbot terintegrasi</strong>.
+            </p>
+          </div>
+          <div>
+            <div class="px-6 py-3 bg-slate-50 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
+              <div class="flex items-center gap-2 text-[11px] text-slate-500 font-mono">
+                <span>Leaflet.js</span> • <span>GeoJSON</span> • <span>Vercel Deploy</span>
+              </div>
+              <a href="https://webgis-banda-aceh.vercel.app/" target="_blank" rel="noopener" class="text-xs font-semibold text-slate-900 hover:text-blue-600 flex items-center gap-1">
+                Buka Aplikasi &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 (Power BI Business Dashboard) -->
+        <div class="group bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+          <div>
+            <!-- Image Preview (Clickable to view full size) -->
+            <a href="powerbi-sales-dashboard.png" target="_blank" rel="noopener" class="block w-full h-44 bg-slate-100 overflow-hidden border-b border-slate-100 relative cursor-zoom-in" title="Klik untuk melihat gambar ukuran penuh">
+              <img src="powerbi-sales-dashboard.png" alt="Sales Performance Dashboard Power BI" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" />
+              <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-white text-slate-900 shadow-md">
+                  <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+                  Lihat Gambar Penuh
+                </span>
+              </div>
+            </a>
+            
+            <div class="p-5 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-semibold text-amber-600 uppercase tracking-wider bg-amber-50 px-2.5 py-1 rounded-md">Business Intelligence</span>
+                <span class="text-[10px] text-slate-400 font-mono">Power BI Desktop</span>
+              </div>
+              <h3 class="font-heading font-bold text-base text-slate-900 group-hover:text-amber-600 transition-colors">
+                <a href="powerbi-sales-dashboard.png" target="_blank" rel="noopener" class="flex items-center gap-1.5">
+                  Sales & Revenue Analytics Dashboard
+                  <i data-lucide="external-link" class="w-3.5 h-3.5 opacity-70"></i>
+                </a>
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Dashboard analitik performa penjualan retail/e-commerce komprehensif. Menampilkan pemantauan <strong>Total Revenue (Rp515,8M)</strong> & <strong>Total Profit (Rp87,9M)</strong>, breakdown pendapatan per kategori produk (Electronics, Home, Sports), visualisasi tren penjualan harian, serta segmentasi demografi pelanggan berdasarkan kelompok usia.
+              </p>
+            </div>
+          </div>
+
+          <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+            <div class="flex items-center gap-1.5 text-[11px] text-slate-500 font-mono">
+              <span>DAX</span> • <span>Data Modeling</span> • <span>Segmentation</span>
+            </div>
+            <a href="powerbi-sales-dashboard.png" target="_blank" rel="noopener" class="text-xs font-semibold text-slate-900 hover:text-amber-600 flex items-center gap-1">
+              Buka Gambar &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="space-y-6 pt-6">
+      <div class="flex items-center gap-3">
+        <span class="w-8 h-[1px] bg-slate-300"></span>
+        <h2 class="font-heading text-xs uppercase tracking-widest text-slate-400 font-semibold">Kontak & Terhubung</h2>
+      </div>
+
+      <div class="bg-white rounded-3xl border border-slate-200/80 p-8 sm:p-12 shadow-sm space-y-8">
+        <div class="max-w-xl space-y-3">
+          <h3 class="font-heading text-2xl sm:text-3xl font-bold text-slate-900">Tertarik berkolaborasi atau sekadar menyapa?</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Kotak masuk saya selalu terbuka untuk tawaran magang, proyek pemetaan WebGIS, visualisasi analitik data, atau obrolan santai seputar teknologi spasial.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="mailto:agam.muhammad2005@gmail.com" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-slate-900 text-white font-medium text-sm hover:bg-slate-800 transition-all shadow-sm">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            <span>agam.muhammad2005@gmail.com</span>
+          </a>
+          <a href="https://instagram.com/agam.dki" target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl border border-slate-200 text-slate-700 font-medium text-sm hover:bg-slate-50 transition-all">
+            <i data-lucide="instagram" class="w-4 h-4"></i>
+            <span>Instagram @agam.dki</span>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl border border-slate-200 text-slate-700 font-medium text-sm hover:bg-slate-50 transition-all">
+            <i data-lucide="linkedin" class="w-4 h-4"></i>
+            <span>LinkedIn Profile</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200/80 bg-white py-10">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <p>© 2026 Muhamad Al Ghifari. Dibuat dengan bersih & minimalis.</p>
+      <div class="flex items-center gap-6">
+        <a href="#about" class="hover:text-slate-900 transition-colors">Tentang</a>
+        <a href="#projects" class="hover:text-slate-900 transition-colors">Proyek</a>
+        <a href="#contact" class="hover:text-slate-900 transition-colors">Kontak</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Init Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
